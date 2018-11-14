@@ -1,9 +1,0 @@
-(jbuild_version 1)
-
-(library
- ((name            murmur3)
-  (public_name     murmur3)
-  (libraries       (cstruct))
-  (c_names         (MurmurHash3 stubs))))
-  ;; (c_flags         (-I/blah/include))
-  ;; (c_library_flags (-lblah)))))

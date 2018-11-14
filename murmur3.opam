@@ -1,18 +1,14 @@
-opam-version: "1.2"
+opam-version: "2.0"
 name: "murmur3"
 version: "1.0"
 authors: "Vincent Bernardoff <vb@luminar.eu.org>"
 maintainer: "Vincent Bernardoff <vb@luminar.eu.org>"
 homepage: "https://github.com/vbmithr/ocaml-murmur3"
 bug-reports: "https://github.com/vbmithr/ocaml-murmur3/issues"
-dev-repo: "git://github.com/vbmithr/ocaml-murmur3"
-
-available: [
-  ocaml-version >= "4.02.0"
-]
-
-build: [ "jbuilder" "build" "-j" jobs "-p" name "@install" ]
+dev-repo: "git+https://github.com/vbmithr/ocaml-murmur3"
+build: [ "dune" "build" "-j" jobs "-p" name "@install" ]
 depends: [
-  "jbuilder" {build & >= "1.0+beta13"}
-  "cstruct" {>= "3.1.1"}
+  "ocaml" {>= "4.02.0"}
+  "dune" {build & >= "1.4.0"}
+  "cstruct" {>= "3.2.1"}
 ]
